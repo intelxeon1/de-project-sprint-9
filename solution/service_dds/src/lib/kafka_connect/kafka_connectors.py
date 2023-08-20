@@ -49,8 +49,8 @@ class KafkaConsumer:
             'auto.offset.reset': 'earliest',
             'enable.auto.commit': False,
             'error_cb': error_callback,
-            'debug': 'all',
-            'client.id': 'someclientkey'
+            'debug': 'conf',
+            'client.id': 'someclientkey5'
         }
 
         self.topic = topic

@@ -29,9 +29,6 @@ if __name__ == '__main__':
         batch_size=100,
         logger=app.logger,
     )
-
-    scheduler = BackgroundScheduler()
-    scheduler.add_job(func=proc.run, trigger="interval", seconds=config.DEFAULT_JOB_INTERVAL)
-    scheduler.start()
-
-    app.run(debug=True, host='0.0.0.0', use_reloader=False)
+    flag = 1
+    while flag:
+        proc.run()
